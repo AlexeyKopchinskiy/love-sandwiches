@@ -99,3 +99,9 @@ def main():
 
 print("Welcome to Love Sandwiches Data Automation")
 main()
+
+numbers = [1, 2, 3, 4, 5]
+letters = ['a', 'b', 'c', 'd', 'e']
+
+for num, lezter in zip(numbers, letters):
+    print(f"num: {num}, letter:{letter}")
