@@ -119,6 +119,16 @@ def calculate_stock_data(data):
 
     return new_stock_data
 
+def get_stock_values(stock_values):
+    """
+    Retrieve sandwich type headings from the worksheet and create a dictionary
+    pairing the headings with the stock values.
+    """
+    print("Retrieving sandwich type headings...\n")
+    headings = SHEET.worksheet("stock").row_values(1)
+    stock_dict = dict(zip(headings, stock_values))
+
+    return stock_dict
 
 def main():
     """
