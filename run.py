@@ -119,6 +119,7 @@ def calculate_stock_data(data):
 
     return new_stock_data
 
+
 def get_stock_values(stock_values):
     """
     Retrieve sandwich type headings from the worksheet and create a dictionary
@@ -129,6 +130,7 @@ def get_stock_values(stock_values):
     stock_dict = dict(zip(headings, stock_values))
 
     return stock_dict
+
 
 def main():
     """
@@ -142,6 +144,11 @@ def main():
     sales_columns = get_last_5_entries_sales()
     stock_data = calculate_stock_data(sales_columns)
     update_worksheet(stock_data, "stock")
+
+    stock_values_dict = get_stock_values(stock_data)
+    print("Stock values:")
+    print(stock_values_dict)
+
     return stock_data
 
 
